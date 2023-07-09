@@ -1,0 +1,29 @@
+﻿<Page x:Class="Lab_Fit.AtividadesRealizadas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ctls="clr-namespace:Lab_Fit.Controls" 
+        xmlns:local="clr-namespace:Lab_Fit"
+        mc:Ignorable="d"
+        Title="AtividadesRealizadas" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="AtividadesLB" Margin="500,65,0,0" Width="200" Height="250" Background="Transparent" Foreground="{DynamicResource PrimaryTextColor}" HorizontalAlignment="Left" VerticalAlignment="Top" SelectionChanged="AtividadesLB_SelectionChanged">
+        </ListBox>
+        <Label Content="LISTA DE ATIVIDADES" HorizontalAlignment="Left" Margin="500,25,0,0" VerticalAlignment="Top" Width="168"
+            Background="Transparent" BorderBrush="{DynamicResource TextSecundaryColor}" Foreground="{DynamicResource TextSecundaryColor}" FontSize="16" Height="33"/>
+        <Image Margin="667,25,0,0" Source="/Images/plus - small.png" Stretch="Fill" HorizontalAlignment="Left" Width="32" Height="30" VerticalAlignment="Top" MouseDown="Image_MouseDown"/>
+        <Button Content="Eliminar" Style="{DynamicResource Botao_boniti_longo}" Margin="500,315,0,0" Width="207" Height="34" Foreground="Red" Click="Button_Click_1"/>
+        <StackPanel Margin="28,32,0,0" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Width="424">
+            <Label Style="{DynamicResource Label_boniti}" Content="Atividade:" x:Name="Nome_Ativ" FontSize="36" Width="400" Height="60"/>
+            <Label Style="{DynamicResource Label_boniti}" Content="Tipo:" x:Name="Tipo_Atividade" FontSize="24" Height="45" Width="400"/>
+            <Label Style="{DynamicResource Label_boniti}" Content="Descrição:" x:Name="Descricao_atividade" Width="400"/>
+            <Label Style="{DynamicResource Label_boniti}" Content="Data de Inicio" x:Name="Data_inicio" Width="400"/>
+            <Label Style="{DynamicResource Label_boniti}" Content="Data de Fim:" x:Name="Data_fim" Width="400"/>
+            <Label Style="{DynamicResource Label_boniti}" Content="Distancia" x:Name="Distancia" Width="400"/>
+            <Label Style="{DynamicResource Label_boniti}" Content="Calçado usado:" x:Name="Calcado_usado" Width="400"/>
+            <Label Style="{DynamicResource Label_boniti}" Content="Ritmo:" x:Name="Ritmo" Width="400" />
+            <Label Style="{DynamicResource Label_boniti}" Content="Peso Perdido:" x:Name="Peso_Perdido"/>
+        </StackPanel>
+    </Grid>
+</Page>

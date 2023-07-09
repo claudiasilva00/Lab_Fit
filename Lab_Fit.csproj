@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Change.png" />
+    <None Remove="Images\Gear-icon.png" />
+    <None Remove="Images\logo.png" />
+    <None Remove="Images\nike-run-2.jpg" />
+    <None Remove="Images\perfil_default.jpg" />
+    <None Remove="Images\plus - small.png" />
+    <None Remove="Images\plus.png" />
+    <None Remove="Images\sapatilha1.png" />
+    <None Remove="Images\sapatilha2.jpeg" />
+    <None Remove="Images\sapatilha_default.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignInXamlToolkitAddOns" Version="0.0.6" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Change.png" />
+    <Resource Include="Images\Gear-icon.png" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\plus - small.png" />
+    <Resource Include="Images\sapatilha1.png" />
+    <Resource Include="Images\perfil_default.jpg" />
+    <Resource Include="Images\nike-run-2.jpg" />
+    <Resource Include="Images\plus.png" />
+    <Resource Include="Images\sapatilha2.jpeg" />
+    <Resource Include="Images\sapatilha_default.jpg" />
+  </ItemGroup>
+</Project>

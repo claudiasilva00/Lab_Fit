@@ -1,0 +1,24 @@
+<Page x:Class="Lab_Fit.Profile_Page"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Lab_Fit"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Orientation="Vertical" VerticalAlignment="Top" Margin="10,200,0,0">
+            <Label x:Name="tbnome" Content="Lab_Fit" Foreground="{DynamicResource PrimaryTextColor}"/>
+            <Label x:Name="tbidade" Content="Idade: 18" Foreground="{DynamicResource PrimaryTextColor}"/>
+            <Label x:Name="tbbday" Content="Data de nascimento: 22/11/2005" Foreground="{DynamicResource PrimaryTextColor}"/>
+            <Label x:Name="tbsexo" Content="Genero: Não definido" Foreground="{DynamicResource PrimaryTextColor}"/>
+            <Label x:Name="tbaltura" Content="Altura: Não definido" Foreground="{DynamicResource PrimaryTextColor}"/>
+            <Label x:Name="tbpeso" Content="Peso: Não definido" Foreground="{DynamicResource PrimaryTextColor}"/>
+            <Label x:Name="tbimc" Content="IMC: Não definido" Foreground="{DynamicResource PrimaryTextColor}"/>
+        </StackPanel>
+        <Image x:Name = "imgprofile" Margin="14,20,0,0" Source="/Images/perfil_default.jpg" Stretch="Fill" HorizontalAlignment="Left" Width="133" Height="129" VerticalAlignment="Top"/>
+        <Image Margin="630,20,0,0" Source="/Images/Gear-icon.png" MouseDown="Image_MouseDown" Height="48" VerticalAlignment="Top" HorizontalAlignment="Left" Width="48"/>
+        <Label Foreground="{DynamicResource PrimaryTextColor}" Content="Gráfico de atividade" HorizontalAlignment="Left" Margin="200,10,0,0" VerticalAlignment="Top" Width="213"/>
+        <Rectangle HorizontalAlignment="Left" Height="150" Margin="200,40,0,0" Stroke="Black" VerticalAlignment="Top" Width="420" Grid.ColumnSpan="2"/>
+    </Grid>
+</Page>

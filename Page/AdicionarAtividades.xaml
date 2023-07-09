@@ -1,0 +1,69 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Lab_Fit"
+      xmlns:Controls="clr-namespace:Lab_Fit.Controls" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+      x:Class="Lab_Fit.AdicionarAtividades"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdicionarAtividades">
+
+    <Grid>
+        <StackPanel Orientation="Vertical"  >
+        <StackPanel Orientation="Horizontal" Height="50">
+            <Label Content="Nome:" Width="120"
+                Background="Transparent" Foreground="{DynamicResource TextSecundaryColor}" FontSize="16"/>
+                <TextBox x:Name="Nome" TextWrapping="Wrap" Text="" FontSize="16"   Style="{DynamicResource Text_boniti}" Width="200" Height="30"/>
+        </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50">
+        <Label Content="Tipo:" Width="120"
+                Background="Transparent" Foreground="{DynamicResource TextSecundaryColor}" BorderBrush="{DynamicResource TextSecundaryColor}" FontSize="16" />
+                <ComboBox x:Name="TipoBox" FontSize="16" Foreground="{DynamicResource TextSecundaryColor}" BorderBrush="{DynamicResource TextSecundaryColor}" Width="200" Margin="0,-14.6,0,0">
+            <ComboBoxItem Content="Caminhada" />
+            <ComboBoxItem Content="Corrida"/>
+        </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50">
+            <Label Content="Descrição:" 
+                    Background="Transparent" Foreground="{DynamicResource TextSecundaryColor}" FontSize="16" Width="120"/>
+                <TextBox x:Name="Descricao" TextWrapping="Wrap" Text="" FontSize="16" Style="{DynamicResource Text_boniti}" Height="30"/>
+                    
+        </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50">
+            <Label Content="Data de Inicio:" Width="120"
+                Background="Transparent" Foreground="{DynamicResource TextSecundaryColor}" FontSize="16"/>
+                <DatePicker x:Name="date_inicio" FontSize="16" Foreground="{DynamicResource TextSecundaryColor}" BorderBrush="{DynamicResource TextSecundaryColor}" Margin="0,-20,0,0"/>
+                <materialDesign:TimePicker x:Name="Time_inicio" Foreground="{DynamicResource TextSecundaryColor}" BorderBrush="{DynamicResource TextSecundaryColor}" Margin="0,-14.6,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50">
+            <Label Content="Data de Fim:" Width="120"
+                Background="Transparent" Foreground="{DynamicResource TextSecundaryColor}" FontSize="16"/>
+                <DatePicker x:Name="date_fim" FontSize="16" Foreground="{DynamicResource TextSecundaryColor}" BorderBrush="{DynamicResource TextSecundaryColor}" Margin="0,-20,0,0"/>
+                <materialDesign:TimePicker x:Name="Time_fim" Foreground="{DynamicResource TextSecundaryColor}" BorderBrush="{DynamicResource TextSecundaryColor}" Margin="0,-14.6,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50">
+            <Label Content="Distancia:" Width="120"
+                Background="Transparent" Foreground="{DynamicResource TextSecundaryColor}" FontSize="16"/>
+        <TextBox x:Name="Progresso" TextWrapping="Wrap" Text="" FontSize="16" Style="{DynamicResource Text_boniti}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50">
+                <Label Content="Calçado Usado:"  Width="120"
+                Background="Transparent" Foreground="{DynamicResource TextSecundaryColor}" FontSize="16" />
+                <ComboBox x:Name="Calcado_usado" Text="" FontSize="16" Foreground="{DynamicResource TextSecundaryColor}" BorderBrush="{DynamicResource TextSecundaryColor}" Width="200" Margin="0,-14.6,0,0">
+                    <ComboBoxItem Content="N/A"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50">
+            <Label Content="Peso Perdido:" Width="120"
+                Background="Transparent" Foreground="{DynamicResource TextSecundaryColor}" FontSize="16"/>
+
+                <TextBox x:Name="PesoPerdido" TextWrapping="Wrap" FontSize="16" Text="" Style="{DynamicResource Text_boniti}" Height="30"/>
+            </StackPanel>
+        </StackPanel>
+        <Button Content="Confirmar" Width="128" Style="{DynamicResource botao_boniti}" Click="Button_Click" Margin="662,410,0,0"/>
+        
+    </Grid>
+</Page>

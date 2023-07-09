@@ -1,0 +1,43 @@
+﻿<Page x:Class="Lab_Fit.Objetivos"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Lab_Fit"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <StackPanel Margin="36,31,0,0" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <TextBlock Foreground="{DynamicResource TextSecundaryColor}" x:Name="Nome_Destacado" FontSize="18" Text="OBJETIVO DESTACADO:"/>
+            <TextBlock Foreground="{DynamicResource PrimaryTextColor}" FontSize="18" TextWrapping="Wrap" x:Name="Tipo_Destacado" Text="Tipo:" />
+            <TextBlock Foreground="{DynamicResource PrimaryTextColor}" TextWrapping="Wrap" x:Name="EstadoDesejadoo_Destacado" Text="Estado Desejado:"/>
+            <TextBlock Foreground="{DynamicResource PrimaryTextColor}" TextWrapping="Wrap" x:Name="EstadoAtual_Destacado" Text="Estado Atual:" />
+            <TextBlock Foreground="{DynamicResource PrimaryTextColor}" TextWrapping="Wrap" x:Name="DataLimite_Destacada" Text="Data Limite:" />
+            <TextBlock Foreground="{DynamicResource PrimaryTextColor}" TextWrapping="Wrap" x:Name="DataAlcance_Destacada" Text="" />
+        </StackPanel>
+        <StackPanel Margin="530,31,0,0" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <TextBlock Foreground="{DynamicResource TextSecundaryColor}" TextWrapping="Wrap" x:Name="Nome_Selecionado"  FontSize="18" Text="OBJETIVO SELECIONADO: "/>
+            <TextBlock Foreground="{DynamicResource PrimaryTextColor}" TextWrapping="Wrap" FontSize="18" Text="Tipo:" x:Name="Tipo_Selecionado"/>
+            <TextBlock Foreground="{DynamicResource PrimaryTextColor}" TextWrapping="Wrap" x:Name="Estado_Desejado_Selecionado" Text="Estado Desejado: " />
+            <TextBlock Foreground="{DynamicResource PrimaryTextColor}" TextWrapping="Wrap" x:Name="EstadoAtual_Selecionado" Text="Estado Atual: "/>
+            <TextBlock Foreground="{DynamicResource PrimaryTextColor}" TextWrapping="Wrap" x:Name="Data_Limite_Selecionado" Text="Data Limite: "/>
+            <TextBlock Foreground="{DynamicResource PrimaryTextColor}" TextWrapping="Wrap" x:Name="Data_Alcance_Selecionada" Text="" />
+        </StackPanel>
+        <Label Content="LISTA DE OBJETIVOS" HorizontalAlignment="Left" Margin="284,23,0,0" VerticalAlignment="Top"
+            Background="Transparent" Foreground="{DynamicResource TextSecundaryColor}" FontSize="18"/>
+        <Image Margin="454,26,0,0" Source="/images/plus - small.png" Stretch="Fill" HorizontalAlignment="Left" Width="32" Height="30" VerticalAlignment="Top" MouseDown="Image_MouseDown"/>
+
+        <Image Margin="454,26,0,0" Source="/Images/plus - small.png" Stretch="Fill" HorizontalAlignment="Left" Width="32" Height="30" VerticalAlignment="Top" MouseDown="Image_MouseDown"/>
+        <Button Content="Destacar" Style="{DynamicResource botao_boniti}" Click="Button_Click" Margin="599,281,0,0" />
+        <Button Content="Eliminar" Style="{DynamicResource Botao_boniti_longo}" Margin="284,311,0,0" Width="207" Height="34" Foreground="Red" Click="Button_Click_1"/>
+        
+        <TabControl Margin="284,56,0,0" HorizontalAlignment="Left" Width="207" Height="250" VerticalAlignment="Top">
+            <TabItem Header="Atuais" >
+                <ListBox  SelectionChanged="Atv_list_SelectionChanged"  x:Name="atv_list"/>            
+            </TabItem>
+            <TabItem Header="Completos">
+                <ListBox x:Name="Objetivos_Completos" SelectionChanged="Objetivos_Completos_SelectionChanged"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

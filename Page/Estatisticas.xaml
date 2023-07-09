@@ -1,0 +1,37 @@
+﻿<Page
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Lab_Fit"
+             xmlns:ctls="clr-namespace:Lab_Fit.Controls" 
+             xmlns:Controls="clr-namespace:Lab_Fit.Controls" x:Class="Lab_Fit.Estatisticas"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Label Content="Data de Inicio&#xA;" Margin="88,23,544,0" VerticalAlignment="Top"
+                Background="Transparent" BorderBrush="{DynamicResource TextSecundaryColor}" Foreground="{DynamicResource TextSecundaryColor}" FontSize="16" Height="33"/>
+        <Label Content="Data de fim&#xA;" HorizontalAlignment="Left" Margin="361,23,0,0" VerticalAlignment="Top" Width="168"
+                Background="Transparent" BorderBrush="{DynamicResource TextSecundaryColor}" Foreground="{DynamicResource TextSecundaryColor}" FontSize="16" Height="33"/>
+        <DatePicker x:Name="idate" HorizontalAlignment="Left" Margin="88,56,0,0" VerticalAlignment="Top" SelectedDateChanged="Fdate_DataContextChanged" Foreground="{DynamicResource TextSecundaryColor}" BorderBrush="{DynamicResource TextSecundaryColor}"/>
+        <DatePicker x:Name="fdate" HorizontalAlignment="Left" Margin="362,56,0,0" VerticalAlignment="Top" SelectedDateChanged="Fdate_DataContextChanged" Foreground="{DynamicResource TextSecundaryColor}" BorderBrush="{DynamicResource TextSecundaryColor}"/>
+        <StackPanel Orientation="Horizontal" Margin="88,103,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <StackPanel Orientation="Vertical">
+                <Label Style="{DynamicResource ResourceKey=Label_boniti}" Content="Tempo Total:" />
+                <Label Style="{DynamicResource Label_boniti}" Content="Atividade mais longa (distancia):" Width="350"/>
+                <Label Style="{DynamicResource Label_boniti}" Content="Atividade mais longa (tempo):"/>
+                <Label Style="{DynamicResource Label_boniti}" Content="Kilómetro mais rápido:" />
+                <Label Style="{DynamicResource Label_boniti}" Content="Dez Kilómetros mais rápidos:"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Label x:Name="totaltime" Style="{DynamicResource Label_boniti}" Content="NA"/>
+                <Label x:Name="longerdistance" Style="{DynamicResource Label_boniti}" Content="NA"/>
+                <Label x:Name="longertime" Style="{DynamicResource Label_boniti}" Content="NA"/>
+                <Label x:Name="fasterkm" Style="{DynamicResource Label_boniti}" Content="NA"/>
+                <Label x:Name="fasterdezkm" Style="{DynamicResource Label_boniti}" Content="NA"/>
+
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>
